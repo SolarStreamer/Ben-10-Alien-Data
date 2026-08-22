@@ -109,6 +109,13 @@ function handleSearch() {
   result.innerHTML = output;
 }
 
+// Loading Screen Fade
+window.addEventListener("load", () => {
+  const loader = document.getElementById("omniLoading");
+  loader.style.opacity = "0";
+  setTimeout(() => loader.style.display = "none", 1000);
+});
+
 // Init
 document.addEventListener("DOMContentLoaded", () => {
   renderAlienList();
