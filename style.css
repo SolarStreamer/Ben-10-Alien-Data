@@ -61,6 +61,21 @@ header p {
   color: #9aff9a;
 }
 
+/* Category Dropdown */
+#categorySection {
+  text-align: center;
+  padding: 20px;
+}
+
+#categorySelect {
+  padding: 10px;
+  background: #0f1f0f;
+  border: 2px solid #00ff66;
+  color: #d0ffd0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00ff66;
+}
+
 /* Search Section */
 #searchSection {
   padding: 20px;
