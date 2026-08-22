@@ -1,1 +1,259 @@
+/* ============================================================
+   GLOBAL BEN 10 THEME
+   ============================================================ */
+:root {
+  --omni-color: #00ff66; /* Default Omnitrix glow */
+}
 
+body {
+  background: #0a0f0a;
+  color: #d0ffd0;
+  font-family: 'Trebuchet MS', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s ease;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+header {
+  text-align: center;
+  padding: 30px 10px;
+  background: linear-gradient(90deg, #0f260f, #0a0f0a);
+  border-bottom: 3px solid var(--omni-color);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: var(--omni-color);
+  text-shadow: 0 0 10px var(--omni-color);
+}
+
+header p {
+  color: #9aff9a;
+}
+
+/* ============================================================
+   OMNIWATCH LOADING SCREEN
+   ============================================================ */
+#omniLoading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0a0f0a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 1s ease;
+}
+
+/* Outer dial */
+.omniDial {
+  width: 200px;
+  height: 200px;
+  border: 6px solid var(--omni-color);
+  border-radius: 50%;
+  position: relative;
+  animation: omniSpin 4s linear infinite;
+  box-shadow: 0 0 25px var(--omni-color);
+}
+
+/* Inner glowing circle */
+.omniInner {
+  width: 90px;
+  height: 90px;
+  background: #0a0f0a;
+  border: 4px solid var(--omni-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 55px;
+  left: 55px;
+  box-shadow: 0 0 20px var(--omni-color);
+}
+
+/* Alien silhouette slots */
+.omniAlienSlot {
+  position: absolute;
+  width: 80px;
+  height: 20px;
+  color: var(--omni-color);
+  font-size: 0.8rem;
+  text-align: center;
+  text-shadow: 0 0 10px var(--omni-color);
+}
+
+/* Slot positions */
+.omniSlot1 { top: -10px; left: 60px; }
+.omniSlot2 { top: 60px; left: 180px; }
+.omniSlot3 { top: 180px; left: 60px; }
+.omniSlot4 { top: 60px; left: -60px; }
+
+@keyframes omniSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.loadingText {
+  margin-top: 20px;
+  color: var(--omni-color);
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px var(--omni-color);
+}
+
+/* ============================================================
+   OMNITRIX MODEL FILTER
+   ============================================================ */
+#omnitrixFilterSection {
+  text-align: center;
+  padding: 20px;
+}
+
+#omnitrixFilter {
+  padding: 10px;
+  background: #0f1f0f;
+  border: 2px solid var(--omni-color);
+  color: #d0ffd0;
+  border-radius: 8px;
+}
+
+/* ============================================================
+   SEARCH SECTION
+   ============================================================ */
+#searchSection {
+  padding: 20px;
+  text-align: center;
+}
+
+#searchInput {
+  width: 80%;
+  max-width: 400px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid var(--omni-color);
+  background: #0f1f0f;
+  color: #d0ffd0;
+  font-size: 1rem;
+}
+
+#searchResult {
+  margin-top: 20px;
+  padding: 15px;
+  background: #0f1f0f;
+  border: 2px solid var(--omni-color);
+  border-radius: 8px;
+}
+
+/* ============================================================
+   ALIEN LIST GRID
+   ============================================================ */
+#alienSection {
+  padding: 20px;
+}
+
+#alienSection h2 {
+  text-align: center;
+  color: var(--omni-color);
+  text-shadow: 0 0 8px var(--omni-color);
+}
+
+#alienList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.alien-card {
+  background: #0f1f0f;
+  border: 2px solid var(--omni-color);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.alien-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--omni-color);
+}
+
+.alien-card h3 {
+  color: var(--omni-color);
+  margin-bottom: 10px;
+}
+
+.alien-meta {
+  color: #9aff9a;
+}
+
+/* ============================================================
+   OMNITRIX CODE PAGE
+   ============================================================ */
+#codeSection {
+  padding: 20px;
+  text-align: center;
+}
+
+#codeControls button {
+  padding: 12px 20px;
+  margin: 10px;
+  background: var(--omni-color);
+  color: #0a0f0a;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--omni-color);
+}
+
+#codeControls button:hover {
+  box-shadow: 0 0 20px var(--omni-color);
+}
+
+#codeDisplay {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  color: var(--omni-color);
+  text-shadow: 0 0 10px var(--omni-color);
+}
+
+#codeStatus {
+  margin-top: 10px;
+  color: #9aff9a;
+}
+
+.codeHint {
+  margin-top: 20px;
+  color: #9aff9a;
+  font-size: 0.9rem;
+}
+
+/* ============================================================
+   SELF-DESTRUCT SCREEN
+   ============================================================ */
+#selfDestructScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.sdText {
+  color: var(--omni-color);
+  font-size: 1.8rem;
+  text-shadow: 0 0 20px var(--omni-color);
+}
