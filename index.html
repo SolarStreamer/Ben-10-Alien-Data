@@ -3,85 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Omniwatch – Ben 10 Alien Database</title>
+  <title>Ben 10 Alien Database</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Omniwatch Loading Screen -->
-  <div id="omniLoading">
-    <div id="omniDial" class="omniDial">
-      <div class="omniInner"></div>
-      <div class="omniAlienSlot omniSlot1"></div>
-      <div class="omniAlienSlot omniSlot2"></div>
-      <div class="omniAlienSlot omniSlot3"></div>
-      <div class="omniAlienSlot omniSlot4"></div>
-    </div>
-    <p class="loadingText">OMNIWATCH INITIALISING...</p>
-  </div>
-
   <header>
-    <h1>Omniwatch Alien Database</h1>
-    <p>Search, spin the Omnitrix, and enter Omnitrix codes.</p>
+    <h1>Ben 10 Alien Database</h1>
+    <p>Search any alien from the Omnitrix</p>
   </header>
 
-  <!-- Omnitrix Search Bar -->
   <section id="searchSection">
-    <h2>Search Mode</h2>
-    <div id="omnitrixSearchWrapper">
-      <div id="omnitrixSearchRing"></div>
-      <input id="searchInput" type="text"
-             placeholder="Search alien or species...">
-    </div>
+    <input id="searchInput" type="text" placeholder="Search alien or species (e.g. Heatblast or Pyronite)">
+    <button id="searchBtn">Search</button>
     <div id="searchResult">Type an alien name or species to search.</div>
   </section>
 
-  <!-- Omnitrix Dial Section -->
-  <section id="omnitrixSection">
-    <h2>Omnitrix Selector</h2>
-    <div id="selectorDial">
-      <div class="selectorInner"></div>
-      <div class="selectorSlot selectorSlot1"></div>
-      <div class="selectorSlot selectorSlot2"></div>
-      <div class="selectorSlot selectorSlot3"></div>
-      <div class="selectorSlot selectorSlot4"></div>
-    </div>
-    <p class="selectorHint">Tap the centre to view alien info.</p>
-    <div id="selectorInfo"></div>
-  </section>
-
-  <!-- Alien List Section -->
   <section id="alienSection">
     <h2>All Aliens</h2>
     <div id="alienList"></div>
   </section>
-
-  <!-- Omnitrix Code Page -->
-  <section id="codeSection">
-    <h2>Omnitrix Code Input</h2>
-    <p>Use R and L buttons to enter show-accurate Omnitrix codes.</p>
-
-    <div id="codeControls">
-      <button id="btnL">L</button>
-      <button id="btnR">R</button>
-      <button id="btnClear">Clear</button>
-    </div>
-
-    <div id="codeDisplay">Code: </div>
-    <div id="codeStatus">Awaiting input...</div>
-
-    <p class="codeHint">
-      Master Control – RRLLRRLLRL<br>
-      Self Destruct – RRRR<br>
-      Randomiser – RLRLRLRL
-    </p>
-  </section>
-
-  <!-- Self-Destruct Blank Screen -->
-  <div id="selfDestructScreen">
-    <div class="sdText">SYSTEM OVERRIDE – OMNITRIX LOCKDOWN</div>
-  </div>
 
   <script src="script.js"></script>
 </body>
