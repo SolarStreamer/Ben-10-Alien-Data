@@ -25,19 +25,25 @@ header p {
   color: #9aff9a;
 }
 
-/* Category Dropdown */
-#categorySection {
+/* Navigation Buttons */
+#navSection {
   text-align: center;
   padding: 20px;
 }
 
-#categorySelect {
-  padding: 10px;
-  background: #0f1f0f;
-  border: 2px solid #00ff66;
-  color: #d0ffd0;
+#navSection button {
+  padding: 12px 20px;
+  background: #00ff66;
+  color: #0a0f0a;
+  border: none;
   border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
   box-shadow: 0 0 10px #00ff66;
+}
+
+#navSection button:hover {
+  box-shadow: 0 0 20px #00ff66;
 }
 
 /* Search Section */
