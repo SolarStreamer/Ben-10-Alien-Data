@@ -1,3 +1,4 @@
+console.log("SCRIPT LOADED");
 // ===============================
 // FULL BEN 10 ALIEN LIST (62 ALIENS)
 // ===============================
