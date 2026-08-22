@@ -23,11 +23,66 @@ const allAliens = [
   { name: "Way Big", species: "To'kustar" },
   { name: "Arctiguana", species: "Polar Manzardill" },
   { name: "Clockwork", species: "Chronosapien" },
-  { name: "Feedback", species: "Conductoid" }
+  { name: "Feedback", species: "Conductoid" },
+
+  // These were missing before — adding them back:
+  { name: "Buzzshock", species: "Nosedeenian" },
+  { name: "Spitter", species: "Spheroid" },
+  { name: "Swampfire", species: "Methanosian" },
+  { name: "Echo Echo", species: "Sonorosian" },
+  { name: "Humungousaur", species: "Vaxasaurian" },
+  { name: "Jetray", species: "Aerophibian" },
+  { name: "Big Chill", species: "Necrofriggian" },
+  { name: "Chromastone", species: "Crystalsapien" },
+  { name: "Brainstorm", species: "Cerebrocrustacean" },
+  { name: "Spidermonkey", species: "Arachnichimp" },
+  { name: "Goop", species: "Polymorph" },
+  { name: "Alien X", species: "Celestialsapien" },
+  { name: "Lodestar", species: "Biosovortian" },
+  { name: "Rath", species: "Appoplexian" },
+  { name: "Nanomech", species: "Nanochip" },
+  { name: "Water Hazard", species: "Orishan" },
+  { name: "Ampfibian", species: "Amphibian" },
+  { name: "Armodrillo", species: "Talpaedan" },
+  { name: "Terraspin", species: "Geochelone Aerio" },
+  { name: "NRG", species: "Prypiatosian-B" },
+  { name: "Fasttrack", species: "Kineceleran" },
+  { name: "Chamalien", species: "Merlinisapien" },
+  { name: "Eatle", species: "Oryctini" },
+  { name: "Juryrigg", species: "Fixer" },
+  { name: "Shocksquatch", species: "Gimlinopithecus" },
+  { name: "Bloxx", species: "Segmentasapien" },
+  { name: "Gravattack", species: "Galileon" },
+  { name: "Crashhopper", species: "Orthopterran" },
+  { name: "Ball Weevil", species: "Spheroid" },
+  { name: "Walkatrout", species: "Ichthian" }
 ];
 
 // MC BEN 10 CLASSIC (your 22)
-const mcClassic = [...allAliens];
+const mcClassic = [
+  { name: "Heatblast", species: "Pyronite" },
+  { name: "Wildmutt", species: "Vulpimancer" },
+  { name: "Diamondhead", species: "Petrosapien" },
+  { name: "XLR8", species: "Kineceleran" },
+  { name: "Grey Matter", species: "Galvan" },
+  { name: "Four Arms", species: "Tetramand" },
+  { name: "Stinkfly", species: "Lepidopterran" },
+  { name: "Ripjaws", species: "Piscciss Volann" },
+  { name: "Upgrade", species: "Galvanic Mechamorph" },
+  { name: "Ghostfreak", species: "Ectonurite" },
+  { name: "Cannonbolt", species: "Arburian Pelarota" },
+  { name: "Wildvine", species: "Florauna" },
+  { name: "Blitzwolfer", species: "Loboan" },
+  { name: "Snare-oh", species: "Thep Khufan" },
+  { name: "Upchuck", species: "Gourmand" },
+  { name: "Frankenstrike", species: "Transylian" },
+  { name: "Ditto", species: "Splixson" },
+  { name: "Eye Guy", species: "Opticoid" },
+  { name: "Way Big", species: "To'kustar" },
+  { name: "Arctiguana", species: "Polar Manzardill" },
+  { name: "Clockwork", species: "Chronosapien" },
+  { name: "Feedback", species: "Conductoid" }
+];
 
 // Render Alien List
 function renderAlienList(list) {
@@ -91,13 +146,6 @@ document.getElementById("categorySelect").addEventListener("change", (e) => {
   } else if (value === "mcclassic") {
     renderAlienList(mcClassic);
   }
-});
-
-// Loading Screen Fade
-window.addEventListener("load", () => {
-  const loader = document.getElementById("omniLoading");
-  loader.style.opacity = "0";
-  setTimeout(() => loader.style.display = "none", 1000);
 });
 
 // Init
