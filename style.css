@@ -1,8 +1,8 @@
 /* ============================================================
-   GLOBAL BEN 10 THEME
+   GLOBAL BEN 10 NEON THEME (RESTORED)
    ============================================================ */
 :root {
-  --omni-color: #00ff66; /* Default Omnitrix glow */
+  --omni-color: #00ff66; /* Default neon green */
 }
 
 body {
@@ -15,19 +15,20 @@ body {
 }
 
 /* ============================================================
-   HEADER
+   HEADER (RESTORED)
    ============================================================ */
 header {
   text-align: center;
   padding: 30px 10px;
-  background: linear-gradient(90deg, #0f260f, #0a0f0a);
+  background: #0f1f0f;
   border-bottom: 3px solid var(--omni-color);
+  box-shadow: 0 0 20px var(--omni-color);
 }
 
 header h1 {
   font-size: 2.5rem;
   color: var(--omni-color);
-  text-shadow: 0 0 10px var(--omni-color);
+  text-shadow: 0 0 15px var(--omni-color);
 }
 
 header p {
@@ -35,7 +36,7 @@ header p {
 }
 
 /* ============================================================
-   OMNIWATCH LOADING SCREEN
+   OMNIWATCH LOADING SCREEN (NEON RESTORED)
    ============================================================ */
 #omniLoading {
   position: fixed;
@@ -107,7 +108,7 @@ header p {
 }
 
 /* ============================================================
-   OMNITRIX MODEL FILTER
+   OMNITRIX MODEL FILTER (NEON)
    ============================================================ */
 #omnitrixFilterSection {
   text-align: center;
@@ -120,10 +121,11 @@ header p {
   border: 2px solid var(--omni-color);
   color: #d0ffd0;
   border-radius: 8px;
+  box-shadow: 0 0 10px var(--omni-color);
 }
 
 /* ============================================================
-   SEARCH SECTION
+   SEARCH SECTION (RESTORED)
    ============================================================ */
 #searchSection {
   padding: 20px;
@@ -139,6 +141,7 @@ header p {
   background: #0f1f0f;
   color: #d0ffd0;
   font-size: 1rem;
+  box-shadow: 0 0 10px var(--omni-color);
 }
 
 #searchResult {
@@ -147,10 +150,11 @@ header p {
   background: #0f1f0f;
   border: 2px solid var(--omni-color);
   border-radius: 8px;
+  box-shadow: 0 0 10px var(--omni-color);
 }
 
 /* ============================================================
-   ALIEN LIST GRID
+   ALIEN LIST GRID (RESTORED)
    ============================================================ */
 #alienSection {
   padding: 20px;
@@ -176,16 +180,18 @@ header p {
   padding: 15px;
   text-align: center;
   transition: 0.2s;
+  box-shadow: 0 0 10px var(--omni-color);
 }
 
 .alien-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px var(--omni-color);
+  box-shadow: 0 0 20px var(--omni-color);
 }
 
 .alien-card h3 {
   color: var(--omni-color);
   margin-bottom: 10px;
+  text-shadow: 0 0 10px var(--omni-color);
 }
 
 .alien-meta {
@@ -193,7 +199,7 @@ header p {
 }
 
 /* ============================================================
-   OMNITRIX CODE PAGE
+   OMNITRIX CODE PAGE (NEON)
    ============================================================ */
 #codeSection {
   padding: 20px;
@@ -235,7 +241,7 @@ header p {
 }
 
 /* ============================================================
-   SELF-DESTRUCT SCREEN
+   SELF-DESTRUCT SCREEN (NEON)
    ============================================================ */
 #selfDestructScreen {
   position: fixed;
