@@ -3,31 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ben 10 Alien Database</title>
+  <title>MC Ben 10 Classic</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Simple Omnitrix Loading Screen -->
-  <div id="omniLoading">
-    <img id="omniLogo" src="omnitrix.png" alt="Omnitrix Logo">
-    <p class="loadingText">Loading...</p>
-  </div>
-
   <header>
-    <h1>Ben 10 Alien Database</h1>
-    <p>Search any alien from the Omnitrix</p>
+    <h1>MC Ben 10 Classic</h1>
+    <p>Choose a category or search aliens</p>
   </header>
 
+  <!-- Category Dropdown -->
+  <section id="categorySection">
+    <select id="categorySelect">
+      <option value="all">All Aliens</option>
+      <option value="mcclassic">MC Ben 10 Classic</option>
+    </select>
+  </section>
+
+  <!-- Search Section -->
   <section id="searchSection">
     <input id="searchInput" type="text" placeholder="Search alien or species (e.g. Heatblast or Pyronite)">
     <button id="searchBtn">Search</button>
     <div id="searchResult">Type an alien name or species to search.</div>
   </section>
 
+  <!-- Alien List -->
   <section id="alienSection">
-    <h2>All Aliens</h2>
+    <h2>Alien List</h2>
     <div id="alienList"></div>
   </section>
 
