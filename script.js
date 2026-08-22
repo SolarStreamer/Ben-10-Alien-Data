@@ -1,7 +1,7 @@
-console.log("Ben 10 Database Loaded");
+console.log("MC Ben 10 Classic Loaded");
 
 // Full Alien List
-const aliens = [
+const allAliens = [
   { name: "Heatblast", species: "Pyronite" },
   { name: "Wildmutt", species: "Vulpimancer" },
   { name: "Diamondhead", species: "Petrosapien" },
@@ -16,52 +16,25 @@ const aliens = [
   { name: "Wildvine", species: "Florauna" },
   { name: "Blitzwolfer", species: "Loboan" },
   { name: "Snare-oh", species: "Thep Khufan" },
-  { name: "Frankenstrike", species: "Transylian" },
   { name: "Upchuck", species: "Gourmand" },
+  { name: "Frankenstrike", species: "Transylian" },
   { name: "Ditto", species: "Splixson" },
   { name: "Eye Guy", species: "Opticoid" },
   { name: "Way Big", species: "To'kustar" },
-  { name: "Spitter", species: "Spheroid" },
-  { name: "Buzzshock", species: "Nosedeenian" },
   { name: "Arctiguana", species: "Polar Manzardill" },
-  { name: "Swampfire", species: "Methanosian" },
-  { name: "Echo Echo", species: "Sonorosian" },
-  { name: "Humungousaur", species: "Vaxasaurian" },
-  { name: "Jetray", species: "Aerophibian" },
-  { name: "Big Chill", species: "Necrofriggian" },
-  { name: "Chromastone", species: "Crystalsapien" },
-  { name: "Brainstorm", species: "Cerebrocrustacean" },
-  { name: "Spidermonkey", species: "Arachnichimp" },
-  { name: "Goop", species: "Polymorph" },
-  { name: "Alien X", species: "Celestialsapien" },
-  { name: "Lodestar", species: "Biosovortian" },
-  { name: "Rath", species: "Appoplexian" },
-  { name: "Nanomech", species: "Nanochip" },
-  { name: "Water Hazard", species: "Orishan" },
-  { name: "Ampfibian", species: "Amphibian" },
-  { name: "Armodrillo", species: "Talpaedan" },
-  { name: "Terraspin", species: "Geochelone Aerio" },
-  { name: "NRG", species: "Prypiatosian-B" },
-  { name: "Fasttrack", species: "Kineceleran" },
   { name: "Clockwork", species: "Chronosapien" },
-  { name: "Chamalien", species: "Merlinisapien" },
-  { name: "Eatle", species: "Oryctini" },
-  { name: "Juryrigg", species: "Fixer" },
-  { name: "Shocksquatch", species: "Gimlinopithecus" },
-  { name: "Feedback", species: "Conductoid" },
-  { name: "Bloxx", species: "Segmentasapien" },
-  { name: "Gravattack", species: "Galileon" },
-  { name: "Crashhopper", species: "Orthopterran" },
-  { name: "Ball Weevil", species: "Spheroid" },
-  { name: "Walkatrout", species: "Ichthian" }
+  { name: "Feedback", species: "Conductoid" }
 ];
 
-// Render Alien List
-function renderAlienList() {
-  const list = document.getElementById("alienList");
-  list.innerHTML = "";
+// MC Ben 10 Classic (your 22)
+const mcClassic = [...allAliens];
 
-  aliens.forEach(alien => {
+// Render Alien List
+function renderAlienList(list) {
+  const container = document.getElementById("alienList");
+  container.innerHTML = "";
+
+  list.forEach(alien => {
     const card = document.createElement("div");
     card.className = "alien-card";
 
@@ -70,7 +43,7 @@ function renderAlienList() {
       <div class="alien-meta">Species: ${alien.species}</div>
     `;
 
-    list.appendChild(card);
+    container.appendChild(card);
   });
 }
 
@@ -85,7 +58,7 @@ function handleSearch() {
     return;
   }
 
-  const matches = aliens.filter(a =>
+  const matches = allAliens.filter(a =>
     a.name.toLowerCase().includes(query) ||
     a.species.toLowerCase().includes(query)
   );
@@ -109,6 +82,17 @@ function handleSearch() {
   result.innerHTML = output;
 }
 
+// Category Filter
+document.getElementById("categorySelect").addEventListener("change", (e) => {
+  const value = e.target.value;
+
+  if (value === "all") {
+    renderAlienList(allAliens);
+  } else if (value === "mcclassic") {
+    renderAlienList(mcClassic);
+  }
+});
+
 // Loading Screen Fade
 window.addEventListener("load", () => {
   const loader = document.getElementById("omniLoading");
@@ -118,6 +102,6 @@ window.addEventListener("load", () => {
 
 // Init
 document.addEventListener("DOMContentLoaded", () => {
-  renderAlienList();
+  renderAlienList(allAliens);
   document.getElementById("searchBtn").addEventListener("click", handleSearch);
 });
