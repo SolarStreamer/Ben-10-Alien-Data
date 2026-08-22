@@ -1,6 +1,6 @@
 console.log("MC Ben 10 Classic Loaded");
 
-// Full Alien List
+// FULL ALIEN LIST (All Aliens)
 const allAliens = [
   { name: "Heatblast", species: "Pyronite" },
   { name: "Wildmutt", species: "Vulpimancer" },
@@ -26,7 +26,7 @@ const allAliens = [
   { name: "Feedback", species: "Conductoid" }
 ];
 
-// MC Ben 10 Classic (your 22)
+// MC BEN 10 CLASSIC (your 22)
 const mcClassic = [...allAliens];
 
 // Render Alien List
