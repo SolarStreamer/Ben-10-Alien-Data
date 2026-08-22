@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omniwatch – Ben 10 Alien Database</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+  <!-- Omniwatch Loading Screen -->
+  <div id="omniLoading">
+    <div id="omniDial" class="omniDial">
+      <div class="omniInner"></div>
+      <div class="omniAlienSlot omniSlot1"></div>
+      <div class="omniAlienSlot omniSlot2"></div>
+      <div class="omniAlienSlot omniSlot3"></div>
+      <div class="omniAlienSlot omniSlot4"></div>
+    </div>
+    <p class="loadingText">OMNIWATCH INITIALISING...</p>
+  </div>
+
+  <header>
+    <h1>Omniwatch Alien Database</h1>
+    <p>Search, filter Omnitrix models, and enter Omnitrix codes.</p>
+  </header>
+
+  <!-- Omnitrix Model Filter -->
+  <section id="omnitrixFilterSection">
+    <h2>Omnitrix Model</h2>
+    <select id="omnitrixFilter">
+      <option value="prototype">Prototype Omnitrix</option>
+      <option value="classic">Classic Omnitrix</option>
+      <option value="ultimatrix">Ultimatrix</option>
+      <option value="omniverse">Omniverse Omnitrix</option>
+    </select>
+  </section>
+
+  <!-- Search Section -->
+  <section id="searchSection">
+    <input id="searchInput" type="text"
+           placeholder="Search alien or species (e.g. Heatblast or Pyronite)">
+    <div id="searchResult">Type an alien name or species to search.</div>
+  </section>
+
+  <!-- Alien List Section -->
+  <section id="alienSection">
+    <h2>All Aliens</h2>
+    <div id="alienList"></div>
+  </section>
+
+  <!-- Omnitrix Code Page -->
+  <section id="codeSection">
+    <h2>Omnitrix Code Input</h2>
+    <p>Use R and L buttons to enter show-accurate Omnitrix codes.</p>
+
+    <div id="codeControls">
+      <button id="btnL">L</button>
+      <button id="btnR">R</button>
+      <button id="btnClear">Clear</button>
+    </div>
+
+    <div id="codeDisplay">Code: </div>
+    <div id="codeStatus">Awaiting input...</div>
+
+    <p class="codeHint">
+      Example: Master Control – RRLLRRLLRL<br>
+      Self Destruct – 0000 (tap Clear then R four times)
+    </p>
+  </section>
+
+  <!-- Self-Destruct Blank Screen -->
+  <div id="selfDestructScreen">
+    <div class="sdText">SYSTEM OVERRIDE – OMNITRIX LOCKDOWN</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
