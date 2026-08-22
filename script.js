@@ -1,43 +1,73 @@
 // ===============================
-// Ben 10 Alien Data
+// FULL BEN 10 ALIEN LIST (62 ALIENS)
 // ===============================
 const aliens = [
-  {
-    name: "Heatblast",
-    species: "Pyronite",
-    homeworld: "Pyros",
-    description:
-      "A fire-based alien capable of generating and manipulating intense flames and heat.",
-    aliases: ["Pyronite"]
-  },
-  {
-    name: "Four Arms",
-    species: "Tetramand",
-    homeworld: "Khoros",
-    description:
-      "A four-armed powerhouse with immense strength and durability.",
-    aliases: []
-  },
-  {
-    name: "XLR8",
-    species: "Kineceleran",
-    homeworld: "Kinet",
-    description:
-      "A super-speed alien able to move at incredible velocities.",
-    aliases: []
-  },
-  {
-    name: "Diamondhead",
-    species: "Petrosapien",
-    homeworld: "Petropia",
-    description:
-      "A crystalline alien who can form and manipulate durable crystal structures.",
-    aliases: []
-  }
+  { name: "Heatblast", species: "Pyronite" },
+  { name: "Wildmutt", species: "Vulpimancer" },
+  { name: "Diamondhead", species: "Petrosapien" },
+  { name: "XLR8", species: "Kineceleran" },
+  { name: "Grey Matter", species: "Galvan" },
+  { name: "Four Arms", species: "Tetramand" },
+  { name: "Stinkfly", species: "Lepidopterran" },
+  { name: "Ripjaws", species: "Piscciss Volann" },
+  { name: "Upgrade", species: "Galvanic Mechamorph" },
+  { name: "Ghostfreak", species: "Ectonurite" },
+  { name: "Cannonbolt", species: "Arburian Pelarota" },
+  { name: "Wildvine", species: "Florauna" },
+  { name: "Blitzwolfer", species: "Loboan" },
+  { name: "Snare-oh", species: "Thep Khufan" },
+  { name: "Frankenstrike", species: "Transylian" },
+  { name: "Upchuck", species: "Gourmand" },
+  { name: "Ditto", species: "Splixson" },
+  { name: "Eye Guy", species: "Opticoid" },
+  { name: "Way Big", species: "To'kustar" },
+  { name: "Spitter", species: "Spheroid" },
+  { name: "Buzzshock", species: "Nosedeenian" },
+  { name: "Arctiguana", species: "Polar Manzardill" },
+  { name: "Swampfire", species: "Methanosian" },
+  { name: "Echo Echo", species: "Sonorosian" },
+  { name: "Humungousaur", species: "Vaxasaurian" },
+  { name: "Jetray", species: "Aerophibian" },
+  { name: "Big Chill", species: "Necrofriggian" },
+  { name: "Chromastone", species: "Crystalsapien" },
+  { name: "Brainstorm", species: "Cerebrocrustacean" },
+  { name: "Spidermonkey", species: "Arachnichimp" },
+  { name: "Goop", species: "Polymorph" },
+  { name: "Alien X", species: "Celestialsapien" },
+  { name: "Lodestar", species: "Biosovortian" },
+  { name: "Rath", species: "Appoplexian" },
+  { name: "Nanomech", species: "Nanochip" },
+  { name: "Water Hazard", species: "Orishan" },
+  { name: "Ampfibian", species: "Amphibian" },
+  { name: "Armodrillo", species: "Talpaedan" },
+  { name: "Terraspin", species: "Geochelone Aerio" },
+  { name: "NRG", species: "Prypiatosian-B" },
+  { name: "Fasttrack", species: "Kineceleran" },
+  { name: "Clockwork", species: "Chronosapien" },
+  { name: "Chamalien", species: "Merlinisapien" },
+  { name: "Eatle", species: "Oryctini" },
+  { name: "Juryrigg", species: "Fixer" },
+  { name: "Shocksquatch", species: "Gimlinopithecus" },
+  { name: "Feedback", species: "Conductoid" },
+  { name: "Bloxx", species: "Segmentasapien" },
+  { name: "Gravattack", species: "Galileon" },
+  { name: "Crashhopper", species: "Orthopterran" },
+  { name: "Ball Weevil", species: "Spheroid" },
+  { name: "Walkatrout", species: "Ickthian" },
+  { name: "Pesky Dust", species: "Nemuina" },
+  { name: "Mole-Stache", species: "Mustachian" },
+  { name: "The Worst", species: "Atrocian" },
+  { name: "Kickin Hawk", species: "Talonian" },
+  { name: "Toepick", species: "Unknown" },
+  { name: "Astrodactyl", species: "Lunatac" },
+  { name: "Bullfrag", species: "Incursean" },
+  { name: "Atomix", species: "Unknown" },
+  { name: "Gutrot", species: "Unknown" },
+  { name: "Whampire", species: "Vladat" }
 ];
 
 // ===============================
-// Homepage Alien List
+// HOMEPAGE LIST
 // ===============================
 function renderAlienList() {
   const listContainer = document.getElementById("alienList");
@@ -51,9 +81,7 @@ function renderAlienList() {
       <h3>${alien.name}</h3>
       <div class="alien-meta">
         Species: ${alien.species}
-        ${alien.homeworld ? " • Homeworld: " + alien.homeworld : ""}
       </div>
-      <div class="alien-description">${alien.description}</div>
     `;
 
     listContainer.appendChild(card);
@@ -61,7 +89,7 @@ function renderAlienList() {
 }
 
 // ===============================
-// Copy Box Generator
+// COPY BOX
 // ===============================
 function copyBox(label, value) {
   return `
@@ -85,7 +113,20 @@ function copyBox(label, value) {
 }
 
 // ===============================
-// Partial-Match Search Handler
+// IMPORTANCE RANKING
+// ===============================
+function scoreMatch(alien, query) {
+  const q = query.toLowerCase();
+  let score = 0;
+
+  if (alien.name.toLowerCase().includes(q)) score += 100;
+  if (alien.species.toLowerCase().includes(q)) score += 50;
+
+  return score;
+}
+
+// ===============================
+// AUTO SEARCH
 // ===============================
 function handleSearch() {
   const input = document.getElementById("searchInput");
@@ -97,40 +138,22 @@ function handleSearch() {
     return;
   }
 
-  // Find all aliens where ANY field contains the query
-  const matches = aliens.filter((alien) => {
-    const fields = [
-      alien.name.toLowerCase(),
-      alien.species.toLowerCase(),
-      alien.homeworld.toLowerCase(),
-      alien.description.toLowerCase(),
-      ...alien.aliases.map(a => a.toLowerCase())
-    ];
-
-    return fields.some(field => field.includes(query));
-  });
+  const matches = aliens
+    .map(alien => ({ alien, score: scoreMatch(alien, query) }))
+    .filter(item => item.score > 0)
+    .sort((a, b) => b.score - a.score);
 
   if (matches.length === 0) {
     resultDiv.textContent = `No aliens match "${query}".`;
     return;
   }
 
-  // Build result list
   let output = `<strong>Matches (${matches.length}):</strong><br/><br/>`;
 
-  matches.forEach((alien) => {
-    const aliasBoxes = alien.aliases
-      .map(alias => copyBox("Alias", alias))
-      .join("");
-
+  matches.forEach(({ alien }) => {
     output += `
       ${copyBox("Name", alien.name)}
       ${copyBox("Species", alien.species)}
-      ${aliasBoxes}
-      <div style="margin-bottom:20px;">
-        Homeworld: ${alien.homeworld}<br/><br/>
-        ${alien.description}
-      </div>
       <hr style="border-color:#333;margin:15px 0;">
     `;
   });
@@ -139,16 +162,10 @@ function handleSearch() {
 }
 
 // ===============================
-// Init
+// INIT
 // ===============================
 document.addEventListener("DOMContentLoaded", () => {
   renderAlienList();
-
-  const searchButton = document.getElementById("searchButton");
   const searchInput = document.getElementById("searchInput");
-
-  searchButton.addEventListener("click", handleSearch);
-  searchInput.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") handleSearch();
-  });
+  searchInput.addEventListener("input", handleSearch);
 });
