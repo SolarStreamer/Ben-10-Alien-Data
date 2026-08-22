@@ -37,19 +37,6 @@ const aliens = [
 ];
 
 // ===============================
-// Search Map (name, species, aliases)
-// ===============================
-const searchMap = new Map();
-
-aliens.forEach((alien) => {
-  searchMap.set(alien.name.toLowerCase(), alien);
-  searchMap.set(alien.species.toLowerCase(), alien);
-  alien.aliases.forEach((alias) => {
-    searchMap.set(alias.toLowerCase(), alien);
-  });
-});
-
-// ===============================
 // Homepage Alien List
 // ===============================
 function renderAlienList() {
@@ -98,7 +85,7 @@ function copyBox(label, value) {
 }
 
 // ===============================
-// Search Handler
+// Partial-Match Search Handler
 // ===============================
 function handleSearch() {
   const input = document.getElementById("searchInput");
@@ -110,29 +97,45 @@ function handleSearch() {
     return;
   }
 
-  const alien = searchMap.get(query);
+  // Find all aliens where ANY field contains the query
+  const matches = aliens.filter((alien) => {
+    const fields = [
+      alien.name.toLowerCase(),
+      alien.species.toLowerCase(),
+      alien.homeworld.toLowerCase(),
+      alien.description.toLowerCase(),
+      ...alien.aliases.map(a => a.toLowerCase())
+    ];
 
-  if (!alien) {
-    resultDiv.textContent = `No alien found for "${query}". Try Heatblast or Pyronite.`;
+    return fields.some(field => field.includes(query));
+  });
+
+  if (matches.length === 0) {
+    resultDiv.textContent = `No aliens match "${query}".`;
     return;
   }
 
-  // Build alias boxes
-  const aliasBoxes = alien.aliases
-    .map(alias => copyBox("Alias", alias))
-    .join("");
+  // Build result list
+  let output = `<strong>Matches (${matches.length}):</strong><br/><br/>`;
 
-  // Final output
-  resultDiv.innerHTML = `
-    <strong>Result:</strong><br/><br/>
-    ${copyBox("Name", alien.name)}
-    ${copyBox("Species", alien.species)}
-    ${aliasBoxes}
-    <div style="margin-top:10px;">
-      Homeworld: ${alien.homeworld || "Unknown"}<br/><br/>
-      ${alien.description}
-    </div>
-  `;
+  matches.forEach((alien) => {
+    const aliasBoxes = alien.aliases
+      .map(alias => copyBox("Alias", alias))
+      .join("");
+
+    output += `
+      ${copyBox("Name", alien.name)}
+      ${copyBox("Species", alien.species)}
+      ${aliasBoxes}
+      <div style="margin-bottom:20px;">
+        Homeworld: ${alien.homeworld}<br/><br/>
+        ${alien.description}
+      </div>
+      <hr style="border-color:#333;margin:15px 0;">
+    `;
+  });
+
+  resultDiv.innerHTML = output;
 }
 
 // ===============================
