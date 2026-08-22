@@ -1,3 +1,6 @@
+window.onload = function () {
+    console.log("Mc Classic Aliens Loaded");
+};
 console.log("MC Classic Loaded");
 
 // Your 22 aliens
