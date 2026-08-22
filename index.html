@@ -23,25 +23,32 @@
 
   <header>
     <h1>Omniwatch Alien Database</h1>
-    <p>Search, filter Omnitrix models, and enter Omnitrix codes.</p>
+    <p>Search, spin the Omnitrix, and enter Omnitrix codes.</p>
   </header>
 
-  <!-- Omnitrix Model Filter -->
-  <section id="omnitrixFilterSection">
-    <h2>Omnitrix Model</h2>
-    <select id="omnitrixFilter">
-      <option value="prototype">Prototype Omnitrix</option>
-      <option value="classic">Classic Omnitrix</option>
-      <option value="ultimatrix">Ultimatrix</option>
-      <option value="omniverse">Omniverse Omnitrix</option>
-    </select>
+  <!-- Omnitrix Search Bar -->
+  <section id="searchSection">
+    <h2>Search Mode</h2>
+    <div id="omnitrixSearchWrapper">
+      <div id="omnitrixSearchRing"></div>
+      <input id="searchInput" type="text"
+             placeholder="Search alien or species...">
+    </div>
+    <div id="searchResult">Type an alien name or species to search.</div>
   </section>
 
-  <!-- Search Section -->
-  <section id="searchSection">
-    <input id="searchInput" type="text"
-           placeholder="Search alien or species (e.g. Heatblast or Pyronite)">
-    <div id="searchResult">Type an alien name or species to search.</div>
+  <!-- Omnitrix Dial Section -->
+  <section id="omnitrixSection">
+    <h2>Omnitrix Selector</h2>
+    <div id="selectorDial">
+      <div class="selectorInner"></div>
+      <div class="selectorSlot selectorSlot1"></div>
+      <div class="selectorSlot selectorSlot2"></div>
+      <div class="selectorSlot selectorSlot3"></div>
+      <div class="selectorSlot selectorSlot4"></div>
+    </div>
+    <p class="selectorHint">Tap the centre to view alien info.</p>
+    <div id="selectorInfo"></div>
   </section>
 
   <!-- Alien List Section -->
@@ -65,8 +72,9 @@
     <div id="codeStatus">Awaiting input...</div>
 
     <p class="codeHint">
-      Example: Master Control – RRLLRRLLRL<br>
-      Self Destruct – 0000 (tap Clear then R four times)
+      Master Control – RRLLRRLLRL<br>
+      Self Destruct – RRRR<br>
+      Randomiser – RLRLRLRL
     </p>
   </section>
 
