@@ -1,3 +1,6 @@
+window.onload = function () {
+    console.log("All Aliens Loaded");
+};
 console.log("All Aliens Loaded");
 
 // FULL 62 ALIENS
