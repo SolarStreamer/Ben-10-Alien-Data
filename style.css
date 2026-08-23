@@ -1,133 +1,31 @@
-body {
-  background: #0a0f0a;
-  color: #d0ffd0;
-  font-family: 'Trebuchet MS', sans-serif;
-  margin: 0;
-  padding: 0;
+/* Neon button styling for homepage.css */
+
+button,
+.home-btn,
+.nav-btn,
+.action-btn {
+    background-color: #0aff9d;        /* neon green base */
+    color: #000;                      /* readable text */
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+
+    /* neon glow */
+    box-shadow: 0 0 8px #0aff9d,
+                0 0 16px #0aff9d,
+                0 0 32px #0aff9d;
+    transition: 0.2s ease;
 }
 
-/* Header */
-header {
-  text-align: center;
-  padding: 30px 10px;
-  background: #0f1f0f;
-  border-bottom: 3px solid #00ff66;
-  box-shadow: 0 0 20px #00ff66;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  color: #00ff66;
-  text-shadow: 0 0 10px #00ff66;
-}
-
-header p {
-  color: #9aff9a;
-}
-
-/* Navigation Buttons */
-#navSection {
-  text-align: center;
-  padding: 20px;
-}
-
-#navSection button {
-  padding: 12px 20px;
-  background: #00ff66;
-  color: #0a0f0a;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 0 10px #00ff66;
-}
-
-#navSection button:hover {
-  box-shadow: 0 0 20px #00ff66;
-}
-
-/* Search Section */
-#searchSection {
-  padding: 20px;
-  text-align: center;
-}
-
-#searchInput {
-  width: 70%;
-  max-width: 400px;
-  padding: 12px;
-  border-radius: 8px;
-  border: 2px solid #00ff66;
-  background: #0f1f0f;
-  color: #d0ffd0;
-  font-size: 1rem;
-  box-shadow: 0 0 10px #00ff66;
-}
-
-#searchBtn {
-  padding: 12px 20px;
-  margin-left: 10px;
-  background: #00ff66;
-  color: #0a0f0a;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 0 10px #00ff66;
-}
-
-#searchBtn:hover {
-  box-shadow: 0 0 20px #00ff66;
-}
-
-#searchResult {
-  margin-top: 20px;
-  padding: 15px;
-  background: #0f1f0f;
-  border: 2px solid #00ff66;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #00ff66;
-}
-
-/* Alien List */
-#alienSection {
-  padding: 20px;
-}
-
-#alienSection h2 {
-  text-align: center;
-  color: #00ff66;
-  text-shadow: 0 0 8px #00ff66;
-}
-
-#alienList {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-  padding: 20px;
-}
-
-.alien-card {
-  background: #0f1f0f;
-  border: 2px solid #00ff66;
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  transition: 0.2s;
-  box-shadow: 0 0 10px #00ff66;
-}
-
-.alien-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #00ff66;
-}
-
-.alien-card h3 {
-  color: #00ff66;
-  margin-bottom: 10px;
-  text-shadow: 0 0 10px #00ff66;
-}
-
-.alien-meta {
-  color: #9aff9a;
+/* Hover effect */
+button:hover,
+.home-btn:hover,
+.nav-btn:hover,
+.action-btn:hover {
+    box-shadow: 0 0 12px #0aff9d,
+                0 0 24px #0aff9d,
+                0 0 48px #0aff9d;
+    transform: scale(1.05);
 }
