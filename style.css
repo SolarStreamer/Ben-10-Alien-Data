@@ -1,31 +1,138 @@
-/* Neon button styling for homepage.css */
+/* PAGE BACKGROUND */
+body {
+  background: #0a0f0a;
+  color: #d0ffd0;
+  font-family: 'Trebuchet MS', sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
+/* HEADER */
+header {
+  text-align: center;
+  padding: 30px 10px;
+  background: #0f1f0f;
+  border-bottom: 3px solid #00ff66;
+  box-shadow: 0 0 20px #00ff66;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #00ff66;
+  text-shadow: 0 0 10px #00ff66;
+}
+
+header p {
+  color: #9aff9a;
+}
+
+/* NEON BUTTONS */
 button,
 .home-btn,
 .nav-btn,
 .action-btn {
-    background-color: #0aff9d;        /* neon green base */
-    color: #000;                      /* readable text */
+    background-color: #00ff66;
+    color: #0a0f0a;
     border: none;
     padding: 12px 24px;
     font-size: 1rem;
     border-radius: 8px;
     cursor: pointer;
 
-    /* neon glow */
-    box-shadow: 0 0 8px #0aff9d,
-                0 0 16px #0aff9d,
-                0 0 32px #0aff9d;
+    box-shadow: 0 0 8px #00ff66,
+                0 0 16px #00ff66,
+                0 0 32px #00ff66;
     transition: 0.2s ease;
 }
 
-/* Hover effect */
 button:hover,
 .home-btn:hover,
 .nav-btn:hover,
 .action-btn:hover {
-    box-shadow: 0 0 12px #0aff9d,
-                0 0 24px #0aff9d,
-                0 0 48px #0aff9d;
+    box-shadow: 0 0 12px #00ff66,
+                0 0 24px #00ff66,
+                0 0 48px #00ff66;
     transform: scale(1.05);
+}
+
+/* NAV SECTION */
+#navSection {
+  text-align: center;
+  padding: 20px;
+}
+
+/* SEARCH SECTION */
+#searchSection {
+  padding: 20px;
+  text-align: center;
+}
+
+#searchInput {
+  width: 70%;
+  max-width: 400px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #00ff66;
+  background: #0f1f0f;
+  color: #d0ffd0;
+  font-size: 1rem;
+  box-shadow: 0 0 10px #00ff66;
+}
+
+#searchBtn {
+  margin-left: 10px;
+}
+
+#searchResult {
+  margin-top: 20px;
+  padding: 15px;
+  background: #0f1f0f;
+  border: 2px solid #00ff66;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00ff66;
+}
+
+/* ALIEN SECTION */
+#alienSection {
+  padding: 20px;
+}
+
+#alienSection h2 {
+  text-align: center;
+  color: #00ff66;
+  text-shadow: 0 0 8px #00ff66;
+}
+
+/* ALIEN GRID */
+#alienList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+/* ALIEN CARD */
+.alien-card {
+  background: #0f1f0f;
+  border: 2px solid #00ff66;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.2s;
+  box-shadow: 0 0 10px #00ff66;
+}
+
+.alien-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ff66;
+}
+
+.alien-card h3 {
+  color: #00ff66;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #00ff66;
+}
+
+.alien-meta {
+  color: #9aff9a;
 }
