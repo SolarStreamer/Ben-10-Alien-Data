@@ -49,7 +49,7 @@ const allAliens = [
   { name: "Armodrillo", species: "Talpaedan" },
   { name: "Terraspin", species: "Geochelone Aerio" },
   { name: "NRG", species: "Prypiatosian-B" },
-  { name: "Fasttrack", species: "Kineceleran" },
+  { name: "Fasttrack", species: "Citrakayah" },
   { name: "Chamalien", species: "Merlinisapien" },
   { name: "Eatle", species: "Oryctini" },
   { name: "Juryrigg", species: "Fixer" },
