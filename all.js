@@ -59,7 +59,7 @@ const allAliens = [
   { name: "Crashhopper", species: "Orthopterran" },
   { name: "Ball Weevil", species: "Spheroid" },
   { name: "Walkatrout", species: "Ichthian" }
- { name: "Atomix", species: "Nucleon" }
+  { name: "Atomix", species: "Unknown" }
 ];
 
 // Render
