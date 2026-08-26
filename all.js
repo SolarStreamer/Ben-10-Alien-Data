@@ -58,7 +58,7 @@ const allAliens = [
   { name: "Gravattack", species: "Galileon" },
   { name: "Crashhopper", species: "Orthopterran" },
   { name: "Ball Weevil", species: "Spheroid" },
-  { name: "Walkatrout", species: "Ichthian" }
+  { name: "Walkatrout", species: "Ichthian" },
   { name: "Atomix", species: "Unknown" }
 ];
 
